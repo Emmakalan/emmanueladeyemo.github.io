@@ -202,7 +202,8 @@ export function Hero() {
                 <OptimizedImage
                   src={emmanuelImage}
                   alt="Emmanuel Adeyemo"
-                  className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[440px] lg:h-[440px] object-cover rounded-[24px] shadow-2xl ring-1 ring-white/20 group-hover:ring-[#6B8CFF]/50 transition-all duration-500 p-[0px] lg:-translate-y-24"
+                  className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[440px] lg:h-[440px] object-cover shadow-2xl ring-1 ring-white/20 group-hover:ring-[#6B8CFF]/50 transition-all duration-500 p-[0px] lg:-translate-y-24"
+                  style={{ borderRadius: '15px 5px 15px 15px' }}
                   priority={true}
                   sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 440px"
                   quality={90}
