@@ -5,7 +5,7 @@
 
 export default defineConfig({
   plugins: [react()],
-  base: '/emmanueladeyemo.github.io/',
+  base: '/',
   build: {
     target: 'esnext',
     outDir: 'build',
