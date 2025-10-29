@@ -199,15 +199,21 @@ export function Hero() {
               
               {/* Image Container */}
               <div className="relative">
-                <OptimizedImage
-                  src={emmanuelImage}
-                  alt="Emmanuel Adeyemo"
-                  className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[440px] lg:h-[440px] object-cover shadow-2xl ring-1 ring-white/20 group-hover:ring-[#6B8CFF]/50 transition-all duration-500 p-[0px] lg:-translate-y-24"
-                  style={{ borderRadius: '15px 5px 15px 15px' }}
-                  priority={true}
-                  sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 440px"
-                  quality={90}
-                />
+                <div 
+                  className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[440px] lg:h-[440px] shadow-2xl ring-1 ring-white/20 group-hover:ring-[#6B8CFF]/50 transition-all duration-500 p-[0px] lg:-translate-y-24 overflow-hidden"
+                  style={{ 
+                    borderRadius: '15px 5px 15px 15px'
+                  }}
+                >
+                  <OptimizedImage
+                    src={emmanuelImage}
+                    alt="Emmanuel Adeyemo"
+                    className="w-full h-full object-cover"
+                    priority={true}
+                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 440px"
+                    quality={90}
+                  />
+                </div>
                 
                 {/* Decorative Elements */}
                 <div className="hidden sm:block absolute -top-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-[#A3E635]/20 rounded-2xl rotate-12 group-hover:rotate-6 transition-transform duration-500"></div>
