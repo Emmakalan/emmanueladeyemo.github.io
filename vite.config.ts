@@ -3,11 +3,12 @@
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
 
-  export default defineConfig({
-    plugins: [react()],
-    build: {
-      target: 'esnext',
-      outDir: 'build',
+export default defineConfig({
+  plugins: [react()],
+  base: '/emmanueladeyemo.github.io/',
+  build: {
+    target: 'esnext',
+    outDir: 'build',
       rollupOptions: {
         output: {
           manualChunks: {
