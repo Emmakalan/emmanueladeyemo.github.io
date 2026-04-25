@@ -153,19 +153,19 @@ export function Hero() {
                 </a>
               </Button>
               <Button
-                asChild
                 variant="outline"
                 size="lg"
                 className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Emmanuel_Adeyemo_CV.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
-                <a 
-                  href="/resume.pdf" 
-                  download="Emmanuel_Adeyemo_CV.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Download CV <Download className="ml-2 w-4 h-4" />
-                </a>
+                Download CV <Download className="ml-2 w-4 h-4" />
               </Button>
               <Button
                 asChild
