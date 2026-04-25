@@ -152,15 +152,21 @@ export function Hero() {
                   See Work <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+              >
                 <a 
                   href="/resume.pdf" 
                   download="Emmanuel_Adeyemo_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-white/20 text-white hover:bg-white/5 hover:border-white/40 h-10 px-6 py-2"
                 >
-                Download CV <Download className="ml-2 w-4 h-4" />
-              </a>
+                  Download CV <Download className="ml-2 w-4 h-4" />
+                </a>
+              </Button>
               <Button
                 asChild
                 variant="outline"
