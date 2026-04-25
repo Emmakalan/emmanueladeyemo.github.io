@@ -44,7 +44,7 @@ export default function App() {
       </noscript>
       
       <Navigation />
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden" aria-label="Portfolio content">
         <Hero />
         <About />
         <Skills />

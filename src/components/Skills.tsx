@@ -1,5 +1,5 @@
 import { Card } from './ui/card';
-import { Progress } from './ui/progress';
+
 import { Lightbulb, Cpu, Zap, BarChart3, Briefcase, Database, Palette, Code, Brain } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Badge } from './ui/badge';
@@ -39,32 +39,86 @@ export function Skills() {
     {
       title: 'Product Analytics Tools',
       icon: BarChart3,
-      tools: ['Pendo', 'Hotjar', 'Google Analytics', 'Microsoft Clarity', 'Mixpanel'],
+      tools: [
+        { name: 'Pendo', level: 'Expert' },
+        { name: 'Hotjar', level: 'Expert' },
+        { name: 'Google Analytics', level: 'Proficient' },
+        { name: 'Microsoft Clarity', level: 'Proficient' },
+        { name: 'Mixpanel', level: 'Familiar' }
+      ],
     },
     {
       title: 'Product Management Tools',
       icon: Briefcase,
-      tools: ['JIRA', 'Confluence', 'Miro', 'Microsoft Office Suite', 'SharePoint', 'Aha!', 'Zoom', 'Slack', 'Productboard', 'Notion', 'Roadmunk'],
+      tools: [
+        { name: 'JIRA', level: 'Expert' },
+        { name: 'Confluence', level: 'Expert' },
+        { name: 'Miro', level: 'Expert' },
+        { name: 'Microsoft Office', level: 'Expert' },
+        { name: 'SharePoint', level: 'Proficient' },
+        { name: 'Aha!', level: 'Proficient' },
+        { name: 'Zoom', level: 'Expert' },
+        { name: 'Slack', level: 'Expert' },
+        { name: 'Productboard', level: 'Proficient' },
+        { name: 'Notion', level: 'Proficient' },
+        { name: 'Roadmunk', level: 'Familiar' }
+      ],
     },
     {
       title: 'Data Analysis',
       icon: Database,
-      tools: ['SQL', 'Tableau', 'Power BI', 'Redash'],
+      tools: [
+        { name: 'SQL', level: 'Proficient' },
+        { name: 'Tableau', level: 'Proficient' },
+        { name: 'Power BI', level: 'Familiar' },
+        { name: 'Redash', level: 'Familiar' }
+      ],
     },
     {
       title: 'Design Tools',
       icon: Palette,
-      tools: ['Figma', 'XD', 'Miro', 'Framer', 'Pitch'],
+      tools: [
+        { name: 'Figma', level: 'Expert' },
+        { name: 'XD', level: 'Proficient' },
+        { name: 'Miro', level: 'Expert' },
+        { name: 'Framer', level: 'Familiar' },
+        { name: 'Pitch', level: 'Proficient' }
+      ],
     },
     {
       title: 'AI Skills',
       icon: Brain,
-      tools: ['Prompt Engineering', 'AI Agents', 'RAG (Retrieval-Augmented Generation)', 'LLM Integration', 'Fine-tuning Models', 'AI Product Strategy', 'Vector Databases', 'Semantic Search', 'AI Workflows', 'GPT APIs', 'Claude API', 'Langchain'],
+      tools: [
+        { name: 'Prompt Eng.', level: 'Expert' },
+        { name: 'AI Agents', level: 'Expert' },
+        { name: 'RAG', level: 'Expert' },
+        { name: 'LLM Integration', level: 'Expert' },
+        { name: 'Fine-tuning', level: 'Proficient' },
+        { name: 'AI Strategy', level: 'Expert' },
+        { name: 'Vector DBs', level: 'Proficient' },
+        { name: 'Semantic Search', level: 'Expert' },
+        { name: 'AI Workflows', level: 'Expert' },
+        { name: 'GPT APIs', level: 'Expert' },
+        { name: 'Claude API', level: 'Expert' },
+        { name: 'Langchain', level: 'Proficient' }
+      ],
     },
     {
       title: 'Technical Understanding',
       icon: Code,
-      tools: ['APIs', 'AWS Cloud services', 'AI/ML', 'AML/KYC', 'Biometric IDV Solutions', 'Icepanel', 'OAUTH', 'SAML', 'ODIC', 'React', 'HTML/CSS', 'Javascript'],
+      tools: [
+        { name: 'APIs', level: 'Expert' },
+        { name: 'AWS', level: 'Proficient' },
+        { name: 'AI/ML', level: 'Expert' },
+        { name: 'AML/KYC', level: 'Expert' },
+        { name: 'Biometric IDV', level: 'Expert' },
+        { name: 'Icepanel', level: 'Proficient' },
+        { name: 'OAUTH', level: 'Proficient' },
+        { name: 'SAML', level: 'Proficient' },
+        { name: 'React', level: 'Familiar' },
+        { name: 'HTML/CSS', level: 'Proficient' },
+        { name: 'Javascript', level: 'Familiar' }
+      ],
     },
   ];
 
@@ -165,9 +219,14 @@ export function Skills() {
                         <Badge
                           key={idx}
                           variant="secondary"
-                          className="bg-white/10 text-gray-300 border-white/20 hover:bg-[#6B8CFF]/20 hover:text-white hover:border-[#6B8CFF]/50 transition-all duration-200 cursor-default"
+                          className={`bg-white/5 border-white/10 text-xs px-2 py-1 transition-all duration-200 cursor-default flex items-center gap-1.5
+                            ${tool.level === 'Expert' ? 'text-[#A3E635] border-[#A3E635]/30' : 
+                              tool.level === 'Proficient' ? 'text-[#6B8CFF] border-[#6B8CFF]/30' : 
+                              'text-gray-400 border-white/10'}`}
                         >
-                          {tool}
+                          <span>{tool.name}</span>
+                          <span className="w-1 h-1 rounded-full bg-current opacity-40"></span>
+                          <span className="text-[10px] uppercase tracking-wider opacity-60 font-semibold">{tool.level}</span>
                         </Badge>
                       ))}
                     </div>

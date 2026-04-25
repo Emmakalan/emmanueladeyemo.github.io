@@ -74,9 +74,9 @@ export function Companies() {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <h2 className="text-4xl lg:text-5xl text-white mb-4">Happy Clients</h2>
+          <h2 className="text-4xl lg:text-5xl text-white mb-4">Companies & Projects</h2>
           <p className="text-gray-400 mb-12">
-            I've had the pleasure of working with amazing tech companies
+            Organizations and projects where I've driven impact
           </p>
           
           {/* Client Logos - Auto Scrolling */}
@@ -181,35 +181,6 @@ export function Companies() {
             </motion.div>
           ))}
         </div>
-
-        {/* Summary Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
-        >
-          {[
-            { value: '4+', label: 'Organizations' },
-            { value: '8+', label: 'Years Experience' },
-            { value: '300M+', label: 'Customers Reached' },
-            { value: '7+', label: 'Industries' },
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 hover:border-[#6B8CFF]/30 transition-all duration-300"
-            >
-              <div className="text-4xl lg:text-5xl text-white mb-2 bg-gradient-to-r from-[#6B8CFF] to-[#4F46E5] bg-clip-text text-transparent">
-                {stat.value}
-              </div>
-              <div className="text-gray-400">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

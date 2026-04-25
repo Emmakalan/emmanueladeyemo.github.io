@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Linkedin, Home, User, Zap, Lightbulb, Briefcase, FolderKanban, Mail } from 'lucide-react';
+import { Menu, X, Linkedin, Github, Home, User, Zap, Lightbulb, Briefcase, FolderKanban, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 import emmanuelLogo from '../assets/Emmanuel\'s logo-01.svg';
 
@@ -62,15 +62,25 @@ export function Navigation() {
             })}
           </div>
 
-          {/* LinkedIn - Right Side */}
-          <div className="hidden md:flex items-center z-10">
+          {/* Social Links - Right Side */}
+          <div className="hidden md:flex items-center gap-3 z-10">
+            <a
+              href="https://github.com/Emmakalan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-200"
+              aria-label="GitHub"
+            >
+              <Github className="w-4 h-4" />
+            </a>
             <a
               href="https://www.linkedin.com/in/emmanuel-adeyemo-b5a501104/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8CFF]/10 border border-[#6B8CFF]/40 text-[#6B8CFF] hover:bg-[#6B8CFF]/20 hover:border-[#6B8CFF] hover:text-white transition-all duration-200 text-sm font-medium"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-4 h-4" />
+              LinkedIn
             </a>
           </div>
 

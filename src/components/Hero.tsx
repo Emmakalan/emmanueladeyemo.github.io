@@ -1,10 +1,10 @@
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { Download, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight, Linkedin } from 'lucide-react';
 import { motion } from 'motion/react';
 import { OptimizedImage } from './OptimizedImage';
 import { useTypingAnimation } from '../hooks/useTypingAnimation';
-import emmanuelImage from 'figma:asset/4939c06fbfe3020e5b3c03d79fb3926ec4e45aee.png';
+import emmanuelImage from 'figma:asset/13651b45b804173f7a797d610dd7734f06fa498d.png';
 
 export function Hero() {
   const fullText = 'Building high-trust, AI-powered products that scale';
@@ -16,7 +16,6 @@ export function Hero() {
 
   const renderTypedText = () => {
     const text = displayedText;
-    const parts = [];
     
     // "Building high-trust, AI-powered products that scale"
     // We want "high-trust" to be gradient
@@ -94,7 +93,7 @@ export function Hero() {
               transition={{ delay: 0.2 }}
             >
               <Badge className="bg-gradient-to-r from-[#6B8CFF]/20 to-[#4F46E5]/20 text-[#A3E635] border border-[#A3E635]/30 px-4 py-2">
-                Open to Product Manager and Product Owner Roles
+                Seeking Senior PM Roles · Fintech & AI · Remote / Global Opportunity
               </Badge>
             </motion.div>
 
@@ -126,7 +125,7 @@ export function Hero() {
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-3"
             >
-              {tags.map((tag, index) => (
+              {tags.map((tag) => (
                 <Badge
                   key={tag}
                   variant="secondary"
@@ -153,14 +152,27 @@ export function Hero() {
                   See Work <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
+                <a 
+                  href="/Emmanuel_Adeyemo_CV.pdf" 
+                  download="Emmanuel_Adeyemo_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-white/20 text-white hover:bg-white/5 hover:border-white/40 h-10 px-6 py-2"
+                >
+                Download CV <Download className="ml-2 w-4 h-4" />
+              </a>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+                className="border-[#6B8CFF]/50 text-[#6B8CFF] hover:bg-[#6B8CFF]/10 hover:border-[#6B8CFF] transition-all duration-300"
               >
-                <a href="#contact">
-                  Download CV <Download className="ml-2 w-4 h-4" />
+                <a
+                  href="https://www.linkedin.com/in/emmanuel-adeyemo-b5a501104/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="mr-2 w-4 h-4" /> LinkedIn
                 </a>
               </Button>
             </motion.div>

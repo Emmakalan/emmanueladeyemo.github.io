@@ -55,7 +55,7 @@ export function Portfolio() {
       image: finsynqScreenshot,
       categories: ["Fintech", "AI-Powered"],
       tags: ["Fintech", "AI-Native"],
-      link: "https://finsynq.ca/welcome",
+      link: "https://finsynq.ca/",
       details: {
         situation:
           "Managing personal finances was reactive and time-consuming — users lacked intelligent, real-time insights and actionable guidance.",
@@ -158,6 +158,7 @@ export function Portfolio() {
       categories: ["Education"],
       tags: ["EdTech", "SaaS"],
       link: "#",
+      confidential: true,
       details: {
         situation:
           "Tutoring organizations struggled with fragmented tools for scheduling, communication, and progress tracking.",
@@ -181,6 +182,7 @@ export function Portfolio() {
       categories: ["Government", "IDV & S-IAM"],
       tags: ["GovTech", "Digital Identity"],
       link: "#",
+      confidential: true,
       details: {
         situation:
           "The government's identity verification system lacked interoperability, slowing service delivery and increasing data duplication.",
@@ -204,7 +206,7 @@ export function Portfolio() {
         "https://images.unsplash.com/photo-1656428964836-78d54bf76231?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZGlhZ25vc3RpY3MlMjBoZWFsdGhjYXJlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjE3MTQ1MzV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       categories: ["HealthTech", "AI-Powered"],
       tags: ["HealthTech", "AI & Automation", "EMR"],
-      link: "#",
+      link: "https://novocare-frontend.em-adeyemo.workers.dev/",
       details: {
         situation:
           "Medical diagnostic centers faced challenges managing patient records, communicating results efficiently, and maintaining compliance with healthcare data regulations. Fragmented systems led to slow turnaround times, data inconsistencies, and poor patient engagement.",
@@ -420,7 +422,7 @@ export function Portfolio() {
                   </Accordion>
 
                   {/* Link */}
-                  {project.link !== "#" && (
+                  {project.link !== "#" ? (
                     <a
                       href={project.link}
                       target="_blank"
@@ -430,7 +432,11 @@ export function Portfolio() {
                       Visit Project{" "}
                       <ExternalLink className="w-4 h-4" />
                     </a>
-                  )}
+                  ) : (project as any).confidential ? (
+                    <span className="inline-flex items-center gap-2 text-gray-500 text-sm mt-auto italic">
+                      🔒 Confidential — details available upon request
+                    </span>
+                  ) : null}
                 </div>
               </Card>
             </motion.div>
