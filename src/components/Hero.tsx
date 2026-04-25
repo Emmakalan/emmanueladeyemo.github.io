@@ -153,7 +153,7 @@ export function Hero() {
                 </a>
               </Button>
                 <a 
-                  href="/Emmanuel_Adeyemo_CV.pdf" 
+                  href="/resume.pdf" 
                   download="Emmanuel_Adeyemo_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
